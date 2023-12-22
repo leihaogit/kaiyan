@@ -37,7 +37,7 @@ MVVM
 ## License
 本应用所有数据均来源于开眼，仅供学习和交流使用，严禁用于任何商业用途。请务必尊重原作公司的权益，并遵守相关法律法规。如果您有意使用这些数据进行商业用途，请与原作公司联系并获得他们的明确授权。
 ```
-Copyright [2023] [leihaogit] <leihao168888@gmail.com>
+Copyright (c) 2023 leihaogit <leihao168888@gmail.com>
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
