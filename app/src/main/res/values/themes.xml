@@ -1,0 +1,58 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.KaiYan" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- 自定义颜色属性，适用于日夜间模式 -->
+
+        <!-- 纯白背景颜色 -->
+        <item name="myBg1">@color/white</item>
+        <!-- 灰白色背景颜色 -->
+        <item name="myBg2">@color/white2</item>
+        <!-- 深灰色背景颜色 -->
+        <item name="myBg3">@color/white3</item>
+        <!-- 灰白色背景颜色 -->
+        <item name="myBg4">@color/white4</item>
+        <!-- 纯黑色文字颜色 -->
+        <item name="myText1">@color/black</item>
+        <!-- 淡黑色文字颜色 -->
+        <item name="myText2">@color/black2</item>
+        <!-- 淡黑色文字颜色 -->
+        <item name="myText3">@color/black5</item>
+
+    </style>
+
+    <style name="BottomNavTextActive" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="BottomNavTextInActive" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="CustomDialogTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="CustomTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">16sp</item>
+    </style>
+  <!-- Base application theme. -->
+    <style name="Base.Theme.KaiYan" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+</resources>

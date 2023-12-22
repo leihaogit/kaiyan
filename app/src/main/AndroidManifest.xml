@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.KaiYan"
+        tools:targetApi="31">
+        <activity
+            android:name=".ui.home.activity.CollectActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.activity.PhotoVideoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.activity.WebViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.activity.NotificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.activity.CategoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.activity.PlayVideoActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
+            android:exported="false"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ui.home.activity.SettingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.base.BaseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.activity.HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.splash.SplashActivity"
+            android:exported="true">
+
+            <!-- 适配华为（huawei）刘海屏 -->
+            <meta-data
+                android:name="android.notch_support"
+                android:value="true" />
+            <!-- 适配小米（xiaomi）刘海屏 -->
+            <meta-data
+                android:name="notch.config"
+                android:value="portrait|landscape" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

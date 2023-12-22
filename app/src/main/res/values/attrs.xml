@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    自定义属性-->
+    <attr name="myBg1" format="reference|color" />
+    <attr name="myBg2" format="reference|color" />
+    <attr name="myBg3" format="reference|color" />
+    <attr name="myBg4" format="reference|color" />
+    <attr name="myText1" format="reference|color" />
+    <attr name="myText2" format="reference|color" />
+    <attr name="myText3" format="reference|color" />
+</resources>

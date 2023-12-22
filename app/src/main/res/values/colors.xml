@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="gray">#D5D5D5</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="bg_color">#EBEBEB</color>
+    <color name="selected_color">#000000</color>
+    <color name="unselected_color">#6C6C6C</color>
+    <color name="white2">#F5F5F5</color>
+    <color name="white3">#E5E5E5</color>
+    <color name="white4">#EEEEEE</color>
+    <color name="white5">#9A9A9A</color>
+    <color name="black2">#353535</color>
+    <color name="black3">#454545</color>
+    <color name="black4">#252525</color>
+    <color name="black5">#707070</color>
+    <color name="custom_color">#0288D1</color>
+    <color name="light_gray">#F4F4F4</color>
+    <color name="red">#FF0000</color>
+    <color name="color_no_select">#AAAAAA</color>
+    <color name="color_no_select_1">#D5D5D5</color>
+    <color name="placeholder_color">#D5D5D5</color>
+    <color name="grayDark">#adadad</color>
+    <color name="alphaWhite80">#CCFFFFFF</color>
+    <color name="alphaWhite20">#33FFFFFF</color>
+    <color name="alphaWhite40">#66FFFFFF</color>
+    <color name="alphaBlack10">#1A000000</color>
+    <color name="alphaBlack20">#33000000</color>
+    <color name="alphaBlack50">#80000000</color>
+    <color name="alphaBlack55">#8C000000</color>
+    <color name="alphaBlack70">#B3000000</color>
+</resources>

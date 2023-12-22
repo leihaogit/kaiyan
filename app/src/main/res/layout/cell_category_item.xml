@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:layout_marginStart="@dimen/dp3"
+    android:layout_marginEnd="@dimen/dp3"
+    android:layout_marginBottom="@dimen/dp5"
+    app:cardCornerRadius="@dimen/dp5">
+
+    <io.supercharge.shimmerlayout.ShimmerLayout
+        android:id="@+id/shimmerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView_cover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/todo"
+            android:scaleType="centerCrop"
+            tools:srcCompat="@tools:sample/avatars" />
+    </io.supercharge.shimmerlayout.ShimmerLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom|start"
+        android:layout_marginStart="@dimen/dp8"
+        android:layout_marginBottom="@dimen/dp8"
+        android:alpha="0.6"
+        app:cardCornerRadius="40dp">
+
+        <TextView
+            android:id="@+id/textView_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="?attr/myText1"
+            android:textSize="12sp"
+            tools:text="旅行" />
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.cardview.widget.CardView>
