@@ -1,6 +1,7 @@
 中文 | [English](README-en.md)
 
 # KaiYan
+[![](https://img.shields.io/badge/language%20-%20kotlin%20-%20purple)][1]
 [![](https://img.shields.io/badge/License-Apache%202.0-1d7fbf.svg?style=flat)][20]
 [![](https://img.shields.io/badge/API-26%2B-52c82d.svg?style=flat)][21]
 [![](https://img.shields.io/badge/GitHub-leihaogit-5674dd.svg?style=flat?style=flat-square&logo=GitHub)][22]
