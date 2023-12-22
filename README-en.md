@@ -37,7 +37,7 @@ Scan the QR code or[Click me to download][19]
 ## License
 All data in this application is sourced from OpenEye and is for learning and communication purposes only. It is strictly prohibited to use it for any commercial purposes. Please respect the rights and interests of the original company and comply with relevant laws and regulations. If you intend to use this data for commercial purposes, please contact the original company and obtain their explicit authorization.
 ```
-Copyright [2023] [leihaogit] <leihao168888@gmail.com>
+Copyright (c) 2023 leihaogit <leihao168888@gmail.com>
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
