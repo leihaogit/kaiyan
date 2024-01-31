@@ -10,6 +10,7 @@ import com.hal.kaiyan.R
 import com.hal.kaiyan.databinding.ActivityWebViewBinding
 import com.hal.kaiyan.ui.base.BaseActivity
 import com.hal.kaiyan.ui.base.Constant
+import com.hal.kaiyan.utils.viewBinding
 
 class WebViewActivity : BaseActivity() {
 
@@ -24,9 +25,7 @@ class WebViewActivity : BaseActivity() {
         }
     }
 
-    private val binding: ActivityWebViewBinding by lazy {
-        ActivityWebViewBinding.inflate(layoutInflater)
-    }
+    private val binding: ActivityWebViewBinding by viewBinding()
 
     private var url: String? = null
 

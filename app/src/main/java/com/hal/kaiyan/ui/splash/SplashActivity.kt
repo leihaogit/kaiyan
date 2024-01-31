@@ -9,6 +9,7 @@ import com.hal.kaiyan.R
 import com.hal.kaiyan.databinding.ActivitySplashBinding
 import com.hal.kaiyan.ui.home.activity.HomeActivity
 import com.hal.kaiyan.utils.AppUtils
+import com.hal.kaiyan.utils.viewBinding
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
@@ -21,11 +22,7 @@ import kotlinx.coroutines.launch
 
 class SplashActivity : AppCompatActivity() {
 
-    private val binding: ActivitySplashBinding by lazy {
-        ActivitySplashBinding.inflate(
-            layoutInflater
-        )
-    }
+    private val binding: ActivitySplashBinding by viewBinding()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -22,6 +22,7 @@ import com.hal.kaiyan.ui.base.Constant
 import com.hal.kaiyan.ui.base.ReusePagingFragment
 import com.hal.kaiyan.ui.home.fragment.RelatedFragment
 import com.hal.kaiyan.utils.AppUtils
+import com.hal.kaiyan.utils.viewBinding
 import com.hal.kaiyan.view.TabEntity
 import com.shuyu.gsyvideoplayer.GSYVideoADManager
 import com.shuyu.gsyvideoplayer.GSYVideoManager
@@ -50,7 +51,7 @@ class PlayVideoActivity : BaseActivity() {
         }
     }
 
-    private val binding by lazy { ActivityPlayVideoBinding.inflate(layoutInflater) }
+    private val binding: ActivityPlayVideoBinding by viewBinding()
 
     private lateinit var context: Context
 

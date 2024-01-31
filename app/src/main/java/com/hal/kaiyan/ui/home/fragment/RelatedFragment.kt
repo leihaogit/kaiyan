@@ -16,6 +16,7 @@ import com.hal.kaiyan.net.DataState
 import com.hal.kaiyan.ui.base.BaseFragment
 import com.hal.kaiyan.ui.base.Constant
 import com.hal.kaiyan.ui.home.activity.PlayVideoActivity
+import com.hal.kaiyan.utils.viewBinding
 import com.hal.kaiyan.viewmodel.KaiYanViewModel
 import kotlinx.coroutines.launch
 import java.util.Date
@@ -42,7 +43,7 @@ class RelatedFragment : BaseFragment() {
     //本界面接收的视频数据
     private var videoInfoData: VideoInfoData? = null
 
-    private lateinit var binding: FragmentRelatedBinding
+    private val binding: FragmentRelatedBinding by viewBinding()
 
     //本界面的所有相关数据，包括自身
     private val videos: MutableList<VideoInfoData> = mutableListOf()
@@ -57,7 +58,6 @@ class RelatedFragment : BaseFragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
-        binding = FragmentRelatedBinding.inflate(inflater, container, false)
         return binding.root
     }
 

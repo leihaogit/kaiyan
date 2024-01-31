@@ -6,6 +6,7 @@ import androidx.core.view.children
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.hal.kaiyan.R
+import com.hal.kaiyan.view.MyVideoPlayer
 import com.shuyu.gsyvideoplayer.GSYVideoManager
 import com.shuyu.gsyvideoplayer.video.base.GSYBaseVideoPlayer
 

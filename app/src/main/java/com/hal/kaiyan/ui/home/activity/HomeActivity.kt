@@ -15,6 +15,7 @@ import com.hal.kaiyan.ui.home.fragment.FindFragment
 import com.hal.kaiyan.ui.home.fragment.HomeFragment
 import com.hal.kaiyan.ui.home.fragment.HotFragment
 import com.hal.kaiyan.utils.AppUtils
+import com.hal.kaiyan.utils.viewBinding
 import es.dmoral.toasty.Toasty
 
 class HomeActivity : BaseActivity() {
@@ -28,7 +29,7 @@ class HomeActivity : BaseActivity() {
         }
     }
 
-    private val binding by lazy { ActivityHomeBinding.inflate(layoutInflater) }
+    private val binding: ActivityHomeBinding by viewBinding()
 
     //双击退出
     private var backPressedOnce = false

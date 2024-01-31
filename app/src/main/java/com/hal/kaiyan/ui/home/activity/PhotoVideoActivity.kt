@@ -14,6 +14,7 @@ import com.hal.kaiyan.ui.base.BaseActivity
 import com.hal.kaiyan.ui.base.Constant
 import com.hal.kaiyan.utils.AutoPlayPageChangeListener
 import com.hal.kaiyan.utils.IntentDataUtils
+import com.hal.kaiyan.utils.viewBinding
 import com.shuyu.gsyvideoplayer.GSYVideoADManager
 import com.shuyu.gsyvideoplayer.GSYVideoManager
 
@@ -38,7 +39,7 @@ class PhotoVideoActivity : BaseActivity() {
         }
     }
 
-    private val binding by lazy { ActivityPhotoVideoBinding.inflate(layoutInflater) }
+    private val binding: ActivityPhotoVideoBinding by viewBinding()
 
     private lateinit var context: Context
 

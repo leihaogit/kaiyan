@@ -16,7 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.hal.kaiyan.utils.MyVideoPlayer
+    <com.hal.kaiyan.view.MyVideoPlayer
         android:id="@+id/videoPlayer"
         android:layout_width="0dp"
         android:layout_height="250dp"

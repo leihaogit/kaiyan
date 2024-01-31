@@ -17,6 +17,7 @@ import com.hal.kaiyan.ui.base.BaseFragment
 import com.hal.kaiyan.ui.base.Constant
 import com.hal.kaiyan.ui.base.ReusePagingFragment
 import com.hal.kaiyan.ui.home.activity.CollectActivity
+import com.hal.kaiyan.utils.viewBinding
 import com.hal.kaiyan.view.TabEntity
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -29,12 +30,11 @@ import kotlinx.coroutines.launch
 
 class HomeFragment : BaseFragment() {
 
-    private lateinit var binding: FragmentHomeBinding
+    private val binding: FragmentHomeBinding by viewBinding()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
-        binding = FragmentHomeBinding.inflate(layoutInflater, container, false)
         return binding.root
     }
 

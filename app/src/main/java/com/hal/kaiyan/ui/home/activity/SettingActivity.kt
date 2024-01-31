@@ -16,6 +16,7 @@ import com.hal.kaiyan.ui.base.BaseActivity
 import com.hal.kaiyan.ui.base.Constant
 import com.hal.kaiyan.utils.AppUtils
 import com.hal.kaiyan.utils.byteToMb
+import com.hal.kaiyan.utils.viewBinding
 import com.hal.kaiyan.view.CustomDialog
 import es.dmoral.toasty.Toasty
 import kotlinx.coroutines.delay
@@ -39,9 +40,7 @@ class SettingActivity : BaseActivity() {
         }
     }
 
-    private val binding by lazy {
-        ActivitySettingBinding.inflate(layoutInflater)
-    }
+    private val binding: ActivitySettingBinding by viewBinding()
 
     private lateinit var context: Context
 

@@ -1,4 +1,4 @@
-package com.hal.kaiyan.utils
+package com.hal.kaiyan.view
 
 import android.content.Context
 import android.util.AttributeSet

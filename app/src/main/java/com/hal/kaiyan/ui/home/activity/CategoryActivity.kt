@@ -17,6 +17,7 @@ import com.hal.kaiyan.entity.CategoryData
 import com.hal.kaiyan.ui.base.BaseActivity
 import com.hal.kaiyan.ui.base.Constant
 import com.hal.kaiyan.ui.base.ReusePagingFragment
+import com.hal.kaiyan.utils.viewBinding
 import com.hal.kaiyan.view.TabEntity
 
 class CategoryActivity : BaseActivity() {
@@ -32,7 +33,7 @@ class CategoryActivity : BaseActivity() {
         }
     }
 
-    private val binding by lazy { ActivityCategoryBinding.inflate(layoutInflater) }
+    private val binding: ActivityCategoryBinding by viewBinding()
 
     private lateinit var context: Context
 

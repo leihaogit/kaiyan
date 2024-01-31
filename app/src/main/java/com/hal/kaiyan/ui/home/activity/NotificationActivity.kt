@@ -10,6 +10,7 @@ import com.hal.kaiyan.databinding.ActivityNotificationBinding
 import com.hal.kaiyan.ui.base.BaseActivity
 import com.hal.kaiyan.ui.base.Constant
 import com.hal.kaiyan.ui.base.ReusePagingFragment
+import com.hal.kaiyan.utils.viewBinding
 
 
 /**
@@ -30,9 +31,7 @@ class NotificationActivity : BaseActivity() {
         }
     }
 
-    private val binding by lazy {
-        ActivityNotificationBinding.inflate(layoutInflater)
-    }
+    private val binding: ActivityNotificationBinding by viewBinding()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

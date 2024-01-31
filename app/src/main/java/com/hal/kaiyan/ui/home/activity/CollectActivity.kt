@@ -14,6 +14,7 @@ import com.hal.kaiyan.databinding.ActivityCollectBinding
 import com.hal.kaiyan.ui.base.BaseActivity
 import com.hal.kaiyan.ui.base.Constant
 import com.hal.kaiyan.ui.base.ReusePagingFragment
+import com.hal.kaiyan.utils.viewBinding
 import com.hal.kaiyan.view.CustomDialog
 import com.hal.kaiyan.viewmodel.KaiYanViewModel
 import es.dmoral.toasty.Toasty
@@ -37,9 +38,7 @@ class CollectActivity : BaseActivity() {
         }
     }
 
-    private val binding by lazy {
-        ActivityCollectBinding.inflate(layoutInflater)
-    }
+    private val binding: ActivityCollectBinding by viewBinding()
 
     private lateinit var content: Context
 
