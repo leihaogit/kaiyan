@@ -1,8 +1,5 @@
 package com.hal.kaiyan
 
-import android.os.Build
-import android.os.VibrationEffect
-import android.os.Vibrator
 import androidx.appcompat.app.AppCompatDelegate
 import com.hal.kaiyan.base.BaseApp
 import com.hal.kaiyan.ui.base.Constant
@@ -17,25 +14,6 @@ import com.tencent.mmkv.MMKV
  */
 
 class App : BaseApp() {
-
-    companion object {
-
-        //震动
-        fun vibrate() {
-            val vibrator: Vibrator = appContext.getSystemService(Vibrator::class.java)
-            if (vibrator.hasVibrator()) {
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                    val vibrationEffect =
-                        VibrationEffect.createPredefined(VibrationEffect.EFFECT_TICK)
-                    vibrator.vibrate(vibrationEffect)
-                } else {
-                    val amplitude = VibrationEffect.DEFAULT_AMPLITUDE
-                    val vibrationEffect = VibrationEffect.createOneShot(5, amplitude)
-                    vibrator.vibrate(vibrationEffect)
-                }
-            }
-        }
-    }
 
     override fun onCreate() {
         super.onCreate()

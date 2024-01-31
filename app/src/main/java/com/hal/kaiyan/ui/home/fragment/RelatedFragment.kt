@@ -16,6 +16,7 @@ import com.hal.kaiyan.net.DataState
 import com.hal.kaiyan.ui.base.BaseFragment
 import com.hal.kaiyan.ui.base.Constant
 import com.hal.kaiyan.ui.home.activity.PlayVideoActivity
+import com.hal.kaiyan.utils.vibrate
 import com.hal.kaiyan.utils.viewBinding
 import com.hal.kaiyan.viewmodel.KaiYanViewModel
 import kotlinx.coroutines.launch

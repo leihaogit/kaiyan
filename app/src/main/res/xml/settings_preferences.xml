@@ -1,0 +1,52 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        app:iconSpaceReserved="false"
+        app:title="@string/dark_mode_setting">
+
+        <SwitchPreferenceCompat
+            app:defaultValue="true"
+            app:iconSpaceReserved="false"
+            app:key="switch_follow"
+            app:summary="@string/enable_dark_mode_with_system_settings"
+            app:title="@string/follow_system" />
+
+        <SwitchPreferenceCompat
+            app:enabled="false"
+            app:iconSpaceReserved="false"
+            app:key="switch_night"
+            app:title="@string/dark_mode" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:iconSpaceReserved="false"
+        app:title="@string/play_video_setting">
+
+        <SwitchPreferenceCompat
+            app:iconSpaceReserved="false"
+            app:key="automatic_full_screen_play"
+            app:summary="@string/in_the_video_details_interface_automatically_plays"
+            app:title="@string/automatic_full_screen_play" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:iconSpaceReserved="false"
+        app:title="@string/cache_setting">
+
+        <Preference
+            app:iconSpaceReserved="false"
+            app:key="clear_cache"
+            app:summary="0 MB"
+            app:title="@string/clear_cache" />
+
+        <SwitchPreferenceCompat
+            app:iconSpaceReserved="false"
+            app:key="auto_clear_cache"
+            app:summary="@string/auto_clear_cache_when_quit"
+            app:title="@string/auto_clear_cache" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

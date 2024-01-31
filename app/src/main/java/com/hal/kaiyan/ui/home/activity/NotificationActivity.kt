@@ -10,6 +10,7 @@ import com.hal.kaiyan.databinding.ActivityNotificationBinding
 import com.hal.kaiyan.ui.base.BaseActivity
 import com.hal.kaiyan.ui.base.Constant
 import com.hal.kaiyan.ui.base.ReusePagingFragment
+import com.hal.kaiyan.utils.vibrate
 import com.hal.kaiyan.utils.viewBinding
 
 

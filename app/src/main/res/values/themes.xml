@@ -2,17 +2,8 @@
     <!-- Base application theme. -->
     <style name="Theme.KaiYan" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_700</item>
-        <item name="colorOnSecondary">@color/black</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="colorPrimary">@color/custom_color</item>
         <!-- 自定义颜色属性，适用于日夜间模式 -->
-
         <!-- 纯白背景颜色 -->
         <item name="myBg1">@color/white</item>
         <!-- 灰白色背景颜色 -->
@@ -48,11 +39,6 @@
 
     <style name="CustomTabTextAppearance" parent="TextAppearance.Design.Tab">
         <item name="android:textSize">16sp</item>
-    </style>
-  <!-- Base application theme. -->
-    <style name="Base.Theme.KaiYan" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
 </resources>

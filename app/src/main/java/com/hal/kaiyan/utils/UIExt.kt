@@ -1,6 +1,9 @@
 package com.hal.kaiyan.utils
 
 import android.app.Activity
+import android.os.Build
+import android.os.VibrationEffect
+import android.os.Vibrator
 import android.view.LayoutInflater
 import androidx.annotation.MainThread
 import androidx.fragment.app.Fragment
@@ -8,6 +11,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.LifecycleOwner
 import androidx.viewbinding.ViewBinding
+import com.hal.kaiyan.base.BaseApp
 
 /**
  * 用于 Activity 快捷构建对应 ViewBinding
@@ -58,4 +62,35 @@ inline fun <reified VB : ViewBinding> Fragment.viewBinding() = object : Lazy<VB>
         }
 
     override fun isInitialized(): Boolean = binding != null
+}
+
+/**
+ * 震动扩展
+ */
+fun Activity.vibrate() {
+    val vibrator: Vibrator = BaseApp.appContext.getSystemService(Vibrator::class.java)
+    if (vibrator.hasVibrator()) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            val vibrationEffect = VibrationEffect.createPredefined(VibrationEffect.EFFECT_TICK)
+            vibrator.vibrate(vibrationEffect)
+        } else {
+            val amplitude = VibrationEffect.DEFAULT_AMPLITUDE
+            val vibrationEffect = VibrationEffect.createOneShot(5, amplitude)
+            vibrator.vibrate(vibrationEffect)
+        }
+    }
+}
+
+fun Fragment.vibrate() {
+    val vibrator: Vibrator = BaseApp.appContext.getSystemService(Vibrator::class.java)
+    if (vibrator.hasVibrator()) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            val vibrationEffect = VibrationEffect.createPredefined(VibrationEffect.EFFECT_TICK)
+            vibrator.vibrate(vibrationEffect)
+        } else {
+            val amplitude = VibrationEffect.DEFAULT_AMPLITUDE
+            val vibrationEffect = VibrationEffect.createOneShot(5, amplitude)
+            vibrator.vibrate(vibrationEffect)
+        }
+    }
 }

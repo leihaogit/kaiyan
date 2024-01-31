@@ -15,7 +15,6 @@ import androidx.paging.PagingData
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.gyf.immersionbar.ImmersionBar
-import com.hal.kaiyan.App
 import com.hal.kaiyan.R
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
@@ -57,13 +56,6 @@ abstract class BaseActivity : AppCompatActivity() {
             //是否深色字体
             .statusBarDarkFont(!isDarkMode).init()
 
-    }
-
-    /**
-     * 发出轻微的震动
-     */
-    protected fun vibrate() {
-        App.vibrate()
     }
 
     /**

@@ -36,9 +36,6 @@
     <string name="click_retry">加载失败，点击重试</string>
     <string name="not_loading">加载完成</string>
     <string name="get_data_error">获取数据失败</string>
-    <string name="developed_by">Developed by</string>
-    <string name="my_name">冲锋皓</string>
-    <string name="for_study">仅供学习交流使用</string>
     <string name="play_now">立即播放</string>
     <string name="video_introduce">视频简介</string>
     <string name="play_video_setting">播放设置</string>
@@ -55,8 +52,6 @@
     <string name="monthly">月榜</string>
     <string name="historical">总榜</string>
     <string name="position">%d/%d</string>
-    <string name="download_failed">下载失败</string>
-    <string name="download_success">下载成功</string>
     <string name="collect">收藏（%d）</string>
     <string name="collect_info">收藏</string>
     <string name="collected">已收藏</string>

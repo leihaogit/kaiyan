@@ -15,6 +15,7 @@ import com.hal.kaiyan.ui.home.fragment.FindFragment
 import com.hal.kaiyan.ui.home.fragment.HomeFragment
 import com.hal.kaiyan.ui.home.fragment.HotFragment
 import com.hal.kaiyan.utils.AppUtils
+import com.hal.kaiyan.utils.vibrate
 import com.hal.kaiyan.utils.viewBinding
 import es.dmoral.toasty.Toasty
 

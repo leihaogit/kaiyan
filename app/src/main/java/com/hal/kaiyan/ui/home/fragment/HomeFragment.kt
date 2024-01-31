@@ -10,13 +10,13 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.flyco.tablayout.listener.CustomTabEntity
 import com.flyco.tablayout.listener.OnTabSelectListener
-import com.hal.kaiyan.App
 import com.hal.kaiyan.R
 import com.hal.kaiyan.databinding.FragmentHomeBinding
 import com.hal.kaiyan.ui.base.BaseFragment
 import com.hal.kaiyan.ui.base.Constant
 import com.hal.kaiyan.ui.base.ReusePagingFragment
 import com.hal.kaiyan.ui.home.activity.CollectActivity
+import com.hal.kaiyan.utils.vibrate
 import com.hal.kaiyan.utils.viewBinding
 import com.hal.kaiyan.view.TabEntity
 import kotlinx.coroutines.delay
@@ -51,7 +51,7 @@ class HomeFragment : BaseFragment() {
     private fun initEvent() {
         //去收藏页面
         binding.imageViewLike.setOnClickListener {
-            App.vibrate()
+            vibrate()
             //防止双击
             binding.imageViewLike.isEnabled = false
             lifecycleScope.launch {

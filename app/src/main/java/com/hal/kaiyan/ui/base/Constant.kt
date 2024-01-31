@@ -64,31 +64,31 @@ object Constant {
      * key
      */
     //日夜间模式的key
-    const val KEY_NIGHT_MODE = "key_night_mode"
+    const val KEY_NIGHT_MODE = "KEY_NIGHT_MODE"
 
     //自动全屏模式的key
-    const val KEY_AUTO_FULL_SCREEN = "key_auto_full_screen"
+    const val KEY_AUTO_FULL_SCREEN = "KEY_AUTO_FULL_SCREEN"
 
     //自动清理缓存的key
-    const val KEY_AUTO_CLEAR_CACHE = "key_auto_clear_cache"
+    const val KEY_AUTO_CLEAR_CACHE = "KEY_AUTO_CLEAR_CACHE"
 
     /**
      * value
      */
     //日间模式
-    const val DAY_MODE = "day"
+    const val DAY_MODE = "DAY_MODE"
 
     //夜间模式
-    const val NIGHT_MODE = "night"
+    const val NIGHT_MODE = "NIGHT_MODE"
 
     //跟随系统
-    const val FOLLOW_MODE = "follow"
+    const val FOLLOW_MODE = "FOLLOW_MODE"
 
     //自动模式
-    const val AUTO_MODE = "auto"
+    const val AUTO_MODE = "AUTO_MODE"
 
     //手动模式
-    const val MANUAL_MODE = "manual"
+    const val MANUAL_MODE = "MANUAL_MODE"
 
 
 }

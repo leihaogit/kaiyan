@@ -8,7 +8,7 @@ package com.hal.kaiyan.utils
  * @description 数据传输工具类，处理Intent携带大量数据时，超过1MB限制出现的异常场景
  */
 
-object IntentDataUtils {
+object IntentData {
 
     val map = hashMapOf<String, Any>()
 

@@ -35,6 +35,7 @@ import com.hal.kaiyan.ui.home.activity.CategoryActivity
 import com.hal.kaiyan.ui.home.activity.PhotoVideoActivity
 import com.hal.kaiyan.ui.home.activity.PlayVideoActivity
 import com.hal.kaiyan.ui.home.activity.WebViewActivity
+import com.hal.kaiyan.utils.vibrate
 import com.hal.kaiyan.view.CustomDialog
 import com.hal.kaiyan.viewmodel.KaiYanViewModel
 import kotlinx.coroutines.delay

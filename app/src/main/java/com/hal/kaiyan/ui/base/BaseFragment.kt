@@ -7,7 +7,6 @@ import androidx.lifecycle.repeatOnLifecycle
 import androidx.paging.PagingData
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.hal.kaiyan.App
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
 
@@ -18,14 +17,6 @@ import kotlinx.coroutines.launch
  */
 
 abstract class BaseFragment : Fragment() {
-
-    /**
-     * 发出轻微的震动
-     */
-    protected fun vibrate() {
-        App.vibrate()
-    }
-
     /**
      * 绑定分页数据到 RecyclerView 中的 Adapter
      */

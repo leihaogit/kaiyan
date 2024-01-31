@@ -16,6 +16,7 @@ import com.hal.kaiyan.ui.base.BaseFragment
 import com.hal.kaiyan.ui.base.Constant
 import com.hal.kaiyan.ui.base.ReusePagingFragment
 import com.hal.kaiyan.ui.home.activity.SettingActivity
+import com.hal.kaiyan.utils.vibrate
 import com.hal.kaiyan.utils.viewBinding
 import com.hal.kaiyan.view.TabEntity
 import kotlinx.coroutines.delay

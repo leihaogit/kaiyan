@@ -17,6 +17,7 @@ import com.hal.kaiyan.entity.CategoryData
 import com.hal.kaiyan.ui.base.BaseActivity
 import com.hal.kaiyan.ui.base.Constant
 import com.hal.kaiyan.ui.base.ReusePagingFragment
+import com.hal.kaiyan.utils.vibrate
 import com.hal.kaiyan.utils.viewBinding
 import com.hal.kaiyan.view.TabEntity
 

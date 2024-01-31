@@ -12,11 +12,11 @@ android {
         applicationId = "com.hal.kaiyan"
         minSdk = 26
         targetSdk = 33
-        versionCode = 100
-        versionName = "1.0.0"
+        versionCode = 101
+        versionName = "1.0.1"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         ndk {
-            abiFilters.add("arm64-v8a")
+            abiFilters.add("armeabi-v7a")
         }
     }
 
@@ -41,10 +41,11 @@ android {
 }
 
 dependencies {
+    implementation("androidx.preference:preference:1.2.0")//偏好设置
     implementation("com.tencent:mmkv:1.2.13") // 键值对存储
     implementation("com.scwang.smart:refresh-layout-kernel:2.0.0") //下拉刷新
     implementation("com.github.CarGuo.GSYVideoPlayer:gsyVideoPlayer-java:v8.4.0-release-jitpack") // java 支持
-    implementation("com.github.CarGuo.GSYVideoPlayer:gsyVideoPlayer-arm64:v8.4.0-release-jitpack") // arm64-v8a
+    implementation("com.github.CarGuo.GSYVideoPlayer:gsyVideoPlayer-armv7a:v8.4.0-release-jitpack") // armv7a
     implementation("de.hdodenhof:circleimageview:3.1.0") // 圆形的 ImageView
     implementation("com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar") // 第三方 TabLayout
     implementation("androidx.room:room-paging:2.5.1") // Room 的分页支持依赖
