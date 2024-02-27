@@ -36,6 +36,7 @@ import com.hal.kaiyan.ui.home.activity.PhotoVideoActivity
 import com.hal.kaiyan.ui.home.activity.PlayVideoActivity
 import com.hal.kaiyan.ui.home.activity.WebViewActivity
 import com.hal.kaiyan.utils.vibrate
+import com.hal.kaiyan.utils.viewBinding
 import com.hal.kaiyan.view.CustomDialog
 import com.hal.kaiyan.viewmodel.KaiYanViewModel
 import kotlinx.coroutines.delay
@@ -71,7 +72,7 @@ class ReusePagingFragment : BaseFragment() {
     //本界面接收的视频数据
     private var videoInfoData: VideoInfoData? = null
 
-    private lateinit var binding: FragmentReuseBinding
+    private val binding: FragmentReuseBinding by viewBinding()
 
     private val kaiYanViewModel: KaiYanViewModel by viewModels()
 
@@ -109,7 +110,6 @@ class ReusePagingFragment : BaseFragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
-        binding = FragmentReuseBinding.inflate(inflater, container, false)
         return binding.root
     }
 
