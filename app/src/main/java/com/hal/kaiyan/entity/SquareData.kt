@@ -19,7 +19,7 @@ data class SquareData(
     val picUrls: List<String>?, // 图片列表的 URL 集合，可能为空
     val playUrl: String?, // 视频播放地址，可能为空
     val date: Long //上传时间
-){
+) {
     data class Consumption(
         val collectionCount: Int,
         val shareCount: Int,

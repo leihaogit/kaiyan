@@ -4,11 +4,11 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.hal.kaiyan.App.Companion.mToast
 import com.hal.kaiyan.R
 import com.hal.kaiyan.databinding.ActivityCollectBinding
 import com.hal.kaiyan.ui.base.BaseActivity
@@ -18,7 +18,6 @@ import com.hal.kaiyan.utils.vibrate
 import com.hal.kaiyan.utils.viewBinding
 import com.hal.kaiyan.view.CustomDialog
 import com.hal.kaiyan.viewmodel.KaiYanViewModel
-import es.dmoral.toasty.Toasty
 import kotlinx.coroutines.launch
 
 /**
@@ -27,7 +26,7 @@ import kotlinx.coroutines.launch
  * @date 2023/12/13
  * @description 本地收藏界面
  */
-
+@Suppress("DEPRECATION")
 class CollectActivity : BaseActivity() {
 
     companion object {
@@ -78,9 +77,7 @@ class CollectActivity : BaseActivity() {
                 override fun onRightButtonClick() {
                     lifecycleScope.launch {
                         kaiYanViewModel.deleteAllVideos()
-                        Toasty.normal(
-                            content, resources.getString(R.string.cleared), Toast.LENGTH_SHORT
-                        ).show()
+                        mToast(resources.getString(R.string.cleared))
                     }
                 }
             })

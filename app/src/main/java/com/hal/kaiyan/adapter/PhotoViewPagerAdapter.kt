@@ -2,7 +2,6 @@ package com.hal.kaiyan.adapter
 
 import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
@@ -63,7 +62,7 @@ class PhotoViewPagerAdapter(
 
                     }).into(binding.photoView)
                 binding.photoView.setOnClickListener {
-                    if (pBinding.constraintLayoutTop.visibility == View.VISIBLE) {
+                    if (pBinding.constraintLayoutTop.isVisible) {
                         pBinding.constraintLayoutTop.goneAlphaAnimation()
                         pBinding.constraintLayoutBottom.goneAlphaAnimation()
                     } else {

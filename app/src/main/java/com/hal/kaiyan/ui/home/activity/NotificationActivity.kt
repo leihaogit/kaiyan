@@ -21,6 +21,7 @@ import com.hal.kaiyan.utils.viewBinding
  * @description 通知页面
  */
 
+@Suppress("DEPRECATION")
 class NotificationActivity : BaseActivity() {
 
     companion object {

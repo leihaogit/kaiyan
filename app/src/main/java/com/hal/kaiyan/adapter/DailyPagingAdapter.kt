@@ -1,11 +1,11 @@
 package com.hal.kaiyan.adapter
 
-import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
+import androidx.core.graphics.drawable.toDrawable
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
@@ -78,32 +78,30 @@ class DailyPagingAdapter :
                     //视频封面
                     binding.imageViewCover.let {
                         Glide.with(it).load(videoInfoData.coverUrl).placeholder(
-                                ColorDrawable(
-                                    ContextCompat.getColor(
-                                        binding.root.context, R.color.placeholder_color
-                                    )
-                                )
-                            ).listener(object : RequestListener<Drawable> {
-                                override fun onLoadFailed(
-                                    e: GlideException?,
-                                    model: Any?,
-                                    target: Target<Drawable>?,
-                                    isFirstResource: Boolean
-                                ): Boolean {
-                                    return false
-                                }
+                            ContextCompat.getColor(
+                                binding.root.context, R.color.placeholder_color
+                            ).toDrawable()
+                        ).listener(object : RequestListener<Drawable> {
+                            override fun onLoadFailed(
+                                e: GlideException?,
+                                model: Any?,
+                                target: Target<Drawable>?,
+                                isFirstResource: Boolean
+                            ): Boolean {
+                                return false
+                            }
 
-                                override fun onResourceReady(
-                                    resource: Drawable?,
-                                    model: Any?,
-                                    target: Target<Drawable>?,
-                                    dataSource: DataSource?,
-                                    isFirstResource: Boolean
-                                ): Boolean {
-                                    return false.also { binding.shimmerLayout.stopShimmerAnimation() }
-                                }
+                            override fun onResourceReady(
+                                resource: Drawable?,
+                                model: Any?,
+                                target: Target<Drawable>?,
+                                dataSource: DataSource?,
+                                isFirstResource: Boolean
+                            ): Boolean {
+                                return false.also { binding.shimmerLayout.stopShimmerAnimation() }
+                            }
 
-                            }).into(it)
+                        }).into(it)
                     }
                     //视频作者
                     binding.textViewAuthor.text = videoInfoData.author

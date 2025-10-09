@@ -6,12 +6,14 @@ import android.os.Bundle
 import android.webkit.WebChromeClient
 import android.webkit.WebSettings
 import android.webkit.WebViewClient
+import androidx.activity.addCallback
 import com.hal.kaiyan.R
 import com.hal.kaiyan.databinding.ActivityWebViewBinding
 import com.hal.kaiyan.ui.base.BaseActivity
 import com.hal.kaiyan.ui.base.Constant
 import com.hal.kaiyan.utils.viewBinding
 
+@Suppress("DEPRECATION")
 class WebViewActivity : BaseActivity() {
 
     companion object {
@@ -39,6 +41,15 @@ class WebViewActivity : BaseActivity() {
 
         initEvent()
 
+        onBackPressedDispatcher.addCallback(this) {
+            if (binding.webView.canGoBack()) {
+                binding.webView.goBack()
+                return@addCallback
+            } else {
+                isEnabled = false
+                super.onBackPressed()
+            }
+        }
     }
 
     private fun initData() {
@@ -57,14 +68,6 @@ class WebViewActivity : BaseActivity() {
     private fun initEvent() {
         binding.imageViewBack.setOnClickListener {
             finish()
-        }
-    }
-
-    override fun onBackPressed() {
-        if (binding.webView.canGoBack()) {
-            binding.webView.goBack() // 返回上一个网页
-        } else {
-            super.onBackPressed() // 退出当前Activity
         }
     }
 }

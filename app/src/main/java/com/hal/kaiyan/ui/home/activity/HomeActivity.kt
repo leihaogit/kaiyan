@@ -5,8 +5,10 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
+import androidx.activity.addCallback
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.hal.kaiyan.App.Companion.mToast
 import com.hal.kaiyan.R
 import com.hal.kaiyan.databinding.ActivityHomeBinding
 import com.hal.kaiyan.ui.base.BaseActivity
@@ -17,8 +19,8 @@ import com.hal.kaiyan.ui.home.fragment.HotFragment
 import com.hal.kaiyan.utils.AppUtils
 import com.hal.kaiyan.utils.vibrate
 import com.hal.kaiyan.utils.viewBinding
-import es.dmoral.toasty.Toasty
 
+@Suppress("DEPRECATION")
 class HomeActivity : BaseActivity() {
 
     companion object {
@@ -44,6 +46,17 @@ class HomeActivity : BaseActivity() {
 
         initData()
 
+        onBackPressedDispatcher.addCallback(this) {
+            if (backPressedOnce) {
+                isEnabled = false
+                onBackPressed()
+            } else {
+                backPressedOnce = true
+                mToast(resources.getString(R.string.double_quit))
+                // 延迟2秒后重置标志位
+                Handler(mainLooper).postDelayed({ backPressedOnce = false }, 2000)
+            }
+        }
     }
 
     private fun initData() {
@@ -125,18 +138,6 @@ class HomeActivity : BaseActivity() {
             }
 
             return@setOnItemSelectedListener true
-        }
-    }
-
-    override fun onBackPressed() {
-        if (backPressedOnce) {
-            super.onBackPressed()
-        } else {
-            backPressedOnce = true
-            Toasty.normal(context, resources.getString(R.string.double_quit), Toasty.LENGTH_SHORT)
-                .show()
-            // 延迟2秒后重置标志位
-            Handler(mainLooper).postDelayed({ backPressedOnce = false }, 2000)
         }
     }
 

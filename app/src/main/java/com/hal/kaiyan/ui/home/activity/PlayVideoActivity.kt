@@ -6,6 +6,7 @@ import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
 import android.widget.ImageView
+import androidx.activity.addCallback
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.viewpager2.adapter.FragmentStateAdapter
@@ -37,7 +38,7 @@ import kotlinx.coroutines.launch
  * @description 视频播放页面，注意去配置文件中加：
  * android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
  */
-
+@Suppress("DEPRECATION")
 class PlayVideoActivity : BaseActivity() {
 
     companion object {
@@ -72,6 +73,15 @@ class PlayVideoActivity : BaseActivity() {
         videoInfoData = intent.getSerializableExtra(Constant.VIDEO_INFO_DATA) as VideoInfoData?
 
         initData()
+
+        onBackPressedDispatcher.addCallback(this) {
+            if (GSYVideoManager.backFromWindowFull(this@PlayVideoActivity)) {
+                return@addCallback
+            } else {
+                isEnabled = false
+                onBackPressed()
+            }
+        }
 
     }
 
@@ -184,12 +194,6 @@ class PlayVideoActivity : BaseActivity() {
         super.onDestroy()
         GSYVideoADManager.releaseAllVideos()
         orientationUtils?.releaseListener()
-    }
-
-    override fun onBackPressed() {
-        orientationUtils?.backToProtVideo()
-        if (GSYVideoManager.backFromWindowFull(this)) return
-        super.onBackPressed()
     }
 
     override fun onConfigurationChanged(newConfig: Configuration) {

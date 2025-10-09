@@ -1,5 +1,6 @@
 package com.hal.kaiyan
 
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
 import com.hal.kaiyan.base.BaseApp
 import com.hal.kaiyan.ui.base.Constant
@@ -14,6 +15,12 @@ import com.tencent.mmkv.MMKV
  */
 
 class App : BaseApp() {
+
+    companion object {
+        fun mToast(content: String) {
+            Toast.makeText(appContext, content, Toast.LENGTH_SHORT).show()
+        }
+    }
 
     override fun onCreate() {
         super.onCreate()

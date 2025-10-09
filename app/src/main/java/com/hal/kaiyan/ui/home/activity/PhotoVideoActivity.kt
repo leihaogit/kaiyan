@@ -6,6 +6,8 @@ import android.content.Intent
 import android.graphics.Rect
 import android.os.Bundle
 import android.view.View
+import androidx.activity.OnBackPressedDispatcher
+import androidx.activity.addCallback
 import androidx.core.view.children
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
@@ -30,6 +32,7 @@ import com.shuyu.gsyvideoplayer.video.base.GSYBaseVideoPlayer
  * @description 播放视频和查看照片的界面
  */
 
+@Suppress("DEPRECATION")
 class PhotoVideoActivity : BaseActivity() {
 
     companion object {
@@ -66,6 +69,14 @@ class PhotoVideoActivity : BaseActivity() {
 
         initData()
 
+        onBackPressedDispatcher.addCallback(this) {
+            if (GSYVideoManager.backFromWindowFull(this@PhotoVideoActivity)) {
+                return@addCallback
+            } else {
+                isEnabled = false
+                onBackPressed()
+            }
+        }
     }
 
     /**
@@ -116,11 +127,6 @@ class PhotoVideoActivity : BaseActivity() {
     override fun onDestroy() {
         super.onDestroy()
         GSYVideoADManager.releaseAllVideos()
-    }
-
-    override fun onBackPressed() {
-        if (GSYVideoManager.backFromWindowFull(this)) return
-        super.onBackPressed()
     }
 
     /**

@@ -21,6 +21,7 @@ import com.hal.kaiyan.utils.vibrate
 import com.hal.kaiyan.utils.viewBinding
 import com.hal.kaiyan.view.TabEntity
 
+@Suppress("DEPRECATION")
 class CategoryActivity : BaseActivity() {
 
     companion object {

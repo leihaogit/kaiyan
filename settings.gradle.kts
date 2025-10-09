@@ -3,8 +3,6 @@ pluginManagement {
         google()
         mavenCentral()
         gradlePluginPortal()
-        maven { url = uri("https://www.jitpack.io") }
-        maven { url = uri("https://maven.aliyun.com/repository/public") } // 使用阿里云的 Maven 仓库源
     }
 }
 dependencyResolutionManagement {
@@ -13,8 +11,6 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         gradlePluginPortal()
-        maven { url = uri("https://www.jitpack.io") }
-        maven { url = uri("https://maven.aliyun.com/repository/public") } // 使用阿里云的 Maven 仓库源
     }
 }
 

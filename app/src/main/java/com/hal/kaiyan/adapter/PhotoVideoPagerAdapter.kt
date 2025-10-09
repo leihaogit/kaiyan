@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.bumptech.glide.Glide
@@ -38,7 +39,7 @@ class PhotoVideoPagerAdapter(
         val sourceData = sourceDataList[position]
         //隐藏显示ui
         binding.root.setOnClickListener {
-            if (binding.constraintLayoutTop.visibility == View.VISIBLE) {
+            if (binding.constraintLayoutTop.isVisible) {
                 binding.constraintLayoutTop.goneAlphaAnimation()
                 binding.constraintLayoutBottom.goneAlphaAnimation()
             } else {

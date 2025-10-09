@@ -45,7 +45,7 @@ object AppUtils {
     fun getAppVersion(): String {
         return BaseApp.appContext.packageManager.getPackageInfo(
             BaseApp.appContext.packageName, 0
-        ).versionName
+        ).versionName ?: "0.0"
     }
 
     /**

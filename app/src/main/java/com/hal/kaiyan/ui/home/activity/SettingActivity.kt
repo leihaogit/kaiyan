@@ -22,7 +22,7 @@ import kotlinx.coroutines.launch
  * @date 2023/11/28
  * @description 设置界面
  */
-
+@Suppress("DEPRECATION")
 class SettingActivity : BaseActivity() {
 
     companion object {

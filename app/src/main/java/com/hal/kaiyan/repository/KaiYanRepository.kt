@@ -40,9 +40,10 @@ class KaiYanRepository {
      * 获取分页数据基本配置类
      */
     private fun <T : Any> getPagingData(pagingSourceFactory: () -> PagingSource<Int, T>): Flow<PagingData<T>> {
-        return Pager(config = PagingConfig(
-            pageSize = 10, prefetchDistance = 10
-        ), pagingSourceFactory = { pagingSourceFactory() }).flow
+        return Pager(
+            config = PagingConfig(
+                pageSize = 10, prefetchDistance = 10
+            ), pagingSourceFactory = { pagingSourceFactory() }).flow
     }
 
     /**

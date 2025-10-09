@@ -85,11 +85,12 @@ class HomeFragment : BaseFragment() {
             }
         }
 
-        binding.tabLayout.setTabData(ArrayList<CustomTabEntity>().apply
-        {
-            add(TabEntity(resources.getString(R.string.recommend)))
-            add(TabEntity(resources.getString(R.string.daily)))
-        })
+        binding.tabLayout.setTabData(
+            ArrayList<CustomTabEntity>().apply
+            {
+                add(TabEntity(resources.getString(R.string.recommend)))
+                add(TabEntity(resources.getString(R.string.daily)))
+            })
 
         binding.tabLayout.setOnTabSelectListener(
             object : OnTabSelectListener {

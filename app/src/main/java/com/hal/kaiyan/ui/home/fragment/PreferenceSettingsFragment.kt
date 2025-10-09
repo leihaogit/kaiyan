@@ -5,13 +5,13 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.SwitchPreferenceCompat
+import com.hal.kaiyan.App.Companion.mToast
 import com.hal.kaiyan.R
 import com.hal.kaiyan.ui.base.Constant
 import com.hal.kaiyan.utils.AppUtils
 import com.hal.kaiyan.utils.byteToMb
 import com.hal.kaiyan.utils.vibrate
 import com.hal.kaiyan.view.CustomDialog
-import es.dmoral.toasty.Toasty
 
 /**
  * ...
@@ -180,8 +180,7 @@ class PreferenceSettingsFragment : PreferenceFragmentCompat() {
                         vibrate()
                         AppUtils.clearAppCache()
                         clearCache.summary = 0L.byteToMb()
-                        Toasty.success(requireContext(), resources.getString(R.string.success))
-                            .show()
+                        mToast(resources.getString(R.string.success))
                     }
                 })
                 true

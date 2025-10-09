@@ -1,11 +1,11 @@
 package com.hal.kaiyan.adapter
 
-import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
+import androidx.core.graphics.drawable.toDrawable
 import androidx.core.view.isVisible
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
@@ -76,11 +76,9 @@ class SquarePagingAdapter :
                     //cover图
                     binding.imageViewCover.let {
                         Glide.with(it).load(squareData.coverUrl).placeholder(
-                            ColorDrawable(
-                                ContextCompat.getColor(
-                                    binding.root.context, R.color.placeholder_color
-                                )
-                            )
+                            ContextCompat.getColor(
+                                binding.root.context, R.color.placeholder_color
+                            ).toDrawable()
                         ).listener(object : RequestListener<Drawable> {
                             override fun onLoadFailed(
                                 e: GlideException?,
