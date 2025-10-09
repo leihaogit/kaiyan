@@ -6,7 +6,6 @@ import android.content.Intent
 import android.graphics.Rect
 import android.os.Bundle
 import android.view.View
-import androidx.activity.OnBackPressedDispatcher
 import androidx.activity.addCallback
 import androidx.core.view.children
 import androidx.recyclerview.widget.RecyclerView
