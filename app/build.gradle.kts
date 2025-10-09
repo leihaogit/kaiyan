@@ -12,8 +12,8 @@ android {
         applicationId = "com.hal.kaiyan"
         minSdk = 26
         targetSdk = 36
-        versionCode = 101
-        versionName = "1.0.1"
+        versionCode = 200
+        versionName = "2.0.0"
         ndk {
             abiFilters.add("arm64-v8a")
         }
