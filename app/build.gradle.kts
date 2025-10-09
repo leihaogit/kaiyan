@@ -14,6 +14,7 @@ android {
         targetSdk = 36
         versionCode = 200
         versionName = "2.0.0"
+        setProperty("archivesBaseName", "${rootProject.name}-v${versionName}")
         ndk {
             abiFilters.add("arm64-v8a")
         }
